@@ -5,6 +5,11 @@
 header {position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;min-height:360px;margin:12px;border-radius:12px;background:url('https://ejareconhecidomec.com.br/./assets/headerIMG.jpg') center/cover no-repeat}
 header::before {content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.25));border-radius:12px}
 header h1, header h2, header a {position:relative;color:#fff;text-align:center}
+.mec-banner{display:flex;justify-content:center;margin-top:8px}
+.mec-banner img{max-width:90vw;width:380px;height:auto;object-fit:contain;border-radius:10px;border:1px solid #e9e9e9;background:#fff;padding:6px}
+
+.mec-end{display:flex;justify-content:center;align-items:center;padding:16px;margin:16px 0}
+.mec-end img{max-width:300px;height:auto;border-radius:10px;border:1px solid #e9e9e9}
 
 .gsap-carousel {width:100%;display:flex;flex-direction:column;gap:12px;overflow:hidden;padding:8px 0}
 .gsap-carousel .row {overflow:hidden}
@@ -39,17 +44,17 @@ header h1, header h2, header a {position:relative;color:#fff;text-align:center}
 .lead-form .btn-submit {background:#1F55DE;color:#fff;padding:12px 18px;border:none;border-radius:10px;cursor:pointer;font-weight:700}
 .lead-form .btn-submit:hover {background:#0d3bd1}
 
-.certificacoes {max-width:1100px;margin:24px auto;padding:24px}
+.certificacoes {max-width:1100px;margin:44px auto;padding:20px}
 .certificacoes h1 {font-size:1.6rem;margin-bottom:16px;text-align:center}
-.certificacoes .essentials-cards {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;align-items:stretch;justify-items:stretch}
-.certificacoes .item {display:flex;align-items:flex-start;gap:14px;background:#fff;border:1px solid #e9e9e9;border-radius:12px;padding:16px 18px;box-shadow:0 10px 24px rgba(0,0,0,.06)}
-.certificacoes .item img {width:64px;height:64px;border-radius:8px;object-fit:cover}
-.certificacoes .item svg {width:64px;height:64px}
-.certificacoes .item .text strong {font-size:18px;color:#222}
-.certificacoes .item .text span {font-size:15px;color:#555}
-.certificacoes .item .content {display:flex;flex-direction:column;gap:8px}
-.certificacoes .logo img {width:200px;height:auto;border-radius:10px;border:1px solid #e9e9e9}
-@media (max-width:600px){.certificacoes .item.validade svg,.certificacoes .item.validade .text{display:none}.certificacoes .item.validade{justify-content:center}.certificacoes .logo img{width:220px}}
+.certificacoes .essentials-cards {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;align-items:stretch;justify-items:stretch}
+.certificacoes .item {display:flex;align-items:flex-start;gap:12px;background:#fff;border:1px solid #e9e9e9;border-radius:12px;padding:12px 14px;box-shadow:0 10px 24px rgba(0,0,0,.06)}
+.certificacoes .item img {width:52px;height:52px;border-radius:8px;object-fit:cover}
+.certificacoes .item svg {width:52px;height:52px}
+.certificacoes .item .text strong {font-size:16px;color:#222}
+.certificacoes .item .text span {font-size:14px;color:#555}
+.certificacoes .item .content {display:flex;flex-direction:column;gap:6px}
+.certificacoes .logo img {width:160px;height:auto;border-radius:10px;border:1px solid #e9e9e9}
+@media (max-width:600px){.certificacoes .item.validade svg,.certificacoes .item.validade .text{display:none}.certificacoes .item.validade{justify-content:center}.certificacoes .logo img{width:180px}}
 @media (max-width:900px){.certificacoes .essentials-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:600px){.certificacoes .essentials-cards{grid-template-columns:1fr}}
 
@@ -63,3 +68,48 @@ header h1, header h2, header a {position:relative;color:#fff;text-align:center}
 .icon-green {color:#2ecc71}
 .icon-orange {color:#FF8F00}
 .certificacoes .item .icon-green {color:#2ecc71}
+
+/* Responsividade específica para mobile */
+@media (max-width:480px){
+  .black-friday {padding:10px 12px;border-radius:0;width:100vw;margin:8px calc(50% - 50vw) 8px}
+  header {min-height:320px;margin:8px}
+  .certificacoes {margin:6px auto 2px;padding:2px}
+  .certificacoes h1 {font-size:1.25rem;margin:4px 0 6px 0}
+  .certificacoes .essentials-cards {gap:8px}
+  .certificacoes .item {padding:8px;gap:8px}
+  .certificacoes .logo img {width:180px}
+  .certificacoes .item.validade .logo img {width:260px}
+  .mec-banner{margin-top:16px;margin-bottom:12px;padding:10px}
+  .mec-banner img{width:100%;padding:0;border:none;display:block}
+  .gsap-carousel .item {min-width:220px}
+  .gsap-carousel .item img {height:160px}
+  .form-card {padding:12px;margin:12px auto}
+  .lead-form {grid-template-columns:1fr}
+  .lead-form textarea, .lead-form .field {grid-column:1/-1}
+  .certificacoes .btn.btn-blue{display:none}
+}
+@media (max-width:400px){
+  .gsap-carousel .item {min-width:180px}
+  .gsap-carousel .item img {height:140px}
+  header {min-height:420px}
+  .black-friday {margin:4px calc(50% - 50vw) 16px}
+  .certificacoes {margin:8px auto 6px;padding:6px}
+  .certificacoes h1 {font-size:1.2rem;margin:4px 0 8px 0}
+  .certificacoes .essentials-cards{grid-template-columns:1fr;gap:8px}
+  .certificacoes .item{padding:10px;gap:10px}
+  .certificacoes .item img{width:36px;height:36px}
+  .certificacoes .item svg{width:36px;height:36px}
+  .certificacoes .item .text strong{font-size:14px}
+  .certificacoes .item .text span{font-size:12px}
+  .certificacoes .logo img{width:170px}
+  .certificacoes .item.validade .logo img{width:300px}
+  .certificacoes h1{display:none}
+  .certificacoes .item{background:none;border:none;box-shadow:none}
+  .certificacoes .item:not(.validade){display:none}
+  .certificacoes .item.validade{justify-content:center;padding:0}
+  .certificacoes .item.validade .logo img{width:min(100vw, 340px)}
+  .mec-banner{display:none}
+  .certificacoes{display:none}
+  .conclua{margin-top:8px}
+  .certificacoes .btn.btn-blue{display:none}
+}
