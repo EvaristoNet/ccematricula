@@ -71,7 +71,9 @@ header h1, header h2, header a {position:relative;color:#fff;text-align:center}
 
 /* Responsividade específica para mobile */
 @media (max-width:480px){
-  .black-friday {padding:10px 12px;border-radius:0;width:100vw;margin:8px calc(50% - 50vw) 8px}
+  .black-friday {position:fixed;top:0;left:0;right:0;padding:10px 12px;border-radius:0;width:100%;margin:0;z-index:1000;justify-content:center;text-align:center}
+  body {padding-top:56px}
+  .black-friday strong, .black-friday span {text-align:center}
   header {min-height:320px;margin:8px}
   .certificacoes {margin:6px auto 2px;padding:2px}
   .certificacoes h1 {font-size:1.25rem;margin:4px 0 6px 0}
@@ -81,18 +83,21 @@ header h1, header h2, header a {position:relative;color:#fff;text-align:center}
   .certificacoes .item.validade .logo img {width:260px}
   .mec-banner{margin-top:16px;margin-bottom:12px;padding:10px}
   .mec-banner img{width:100%;padding:0;border:none;display:block}
-  .gsap-carousel .item {min-width:220px}
-  .gsap-carousel .item img {height:160px}
+  .gsap-carousel .item {min-width:280px}
+  .gsap-carousel .item img {height:220px}
   .form-card {padding:12px;margin:12px auto}
   .lead-form {grid-template-columns:1fr}
   .lead-form textarea, .lead-form .field {grid-column:1/-1}
   .certificacoes .btn.btn-blue{display:none}
 }
 @media (max-width:400px){
-  .gsap-carousel .item {min-width:180px}
-  .gsap-carousel .item img {height:140px}
+  .black-friday {position:fixed;top:0;left:0;right:0;padding:10px 12px;border-radius:0;width:100%;margin:0;z-index:1000;justify-content:center;text-align:center}
+  body {padding-top:56px}
+  .black-friday strong, .black-friday span {text-align:center}
+  .gsap-carousel .item {min-width:220px}
+  .gsap-carousel .item img {height:200px}
   header {min-height:420px}
-  .black-friday {margin:4px calc(50% - 50vw) 16px}
+  
   .certificacoes {margin:8px auto 6px;padding:6px}
   .certificacoes h1 {font-size:1.2rem;margin:4px 0 8px 0}
   .certificacoes .essentials-cards{grid-template-columns:1fr;gap:8px}
