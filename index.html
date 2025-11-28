@@ -230,6 +230,28 @@ function gtag_report_conversion(url) {
     if(bottomTrack){ gsap.to(bottomTrack, { xPercent:50, duration:40, repeat:-1, ease:'linear' }); }
   })();
 </script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  (function(){
+    var form = document.querySelector('.lead-form');
+    if(!form) return;
+    emailjs.init({ publicKey: 'YOUR_PUBLIC_KEY' });
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var button = form.querySelector('.btn-submit');
+      if(button){ button.disabled = true; button.textContent = 'Enviando...'; }
+      emailjs.sendForm('service_zpbw5oh', 'template_0bingwl', form)
+        .then(function(){
+          if(button){ button.disabled = false; button.textContent = 'Enviar'; }
+          form.reset();
+          alert('Dados enviados com sucesso! Em breve entraremos em contato.');
+        }, function(){
+          if(button){ button.disabled = false; button.textContent = 'Enviar'; }
+          alert('Não foi possível enviar. Tente novamente mais tarde.');
+        });
+    });
+  })();
+</script>
 <section class="requisitos">
 <div class="card">
 <h1>Documentos necessários (Requisitos)</h1>
