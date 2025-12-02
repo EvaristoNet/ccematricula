@@ -240,7 +240,7 @@ function gtag_report_conversion(url) {
       e.preventDefault();
       var button = form.querySelector('.btn-submit');
       if(button){ button.disabled = true; button.textContent = 'Enviando...'; }
-      emailjs.sendForm('service_zpbw5oh', 'template_0bingwl', form)
+      emailjs.sendForm('service_ft2klbl', 'template_mj0xhrk', form)
         .then(function(){
           if(button){ button.disabled = false; button.textContent = 'Enviar'; }
           form.reset();
